@@ -59,12 +59,9 @@ jobs:
             exit 1
           fi
 
-          GOLANG_VERSION=$(grep -oP '^go (\d+(\.\d+)*)' go.mod | awk '{print $2}')
-
           echo "docker_image_names=$IMAGE_NAMES" >> $GITHUB_OUTPUT
           echo "docker_tags=$DOCKER_TAGS" >> $GITHUB_OUTPUT
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "golang_version=$GOLANG_VERSION" >> $GITHUB_OUTPUT
         shell: bash
 
       - name: image-build-publish
@@ -75,7 +72,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push_dockerhub: ${{ github.event_name != 'pull_request' }}
           push_ghcr: ${{ github.event_name != 'pull_request' }}
-          build_args: VERSION=${{ steps.set-metadata.outputs.version }} GOLANG_VERSION=${{ steps.set-metadata.outputs.golang_version }}
+          build_args: VERSION=${{ steps.set-metadata.outputs.version }}
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
