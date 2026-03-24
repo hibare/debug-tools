@@ -1,5 +1,5 @@
 # Use Alpine as the base image for a smaller size
-FROM alpine:latest
+FROM alpine:latest@sha256:25109184c71bdad752c8312a8623239686a9a2071e8825f20acb8f2198c3f659
 
 # Set environment variables to avoid interaction during apt installs
 ENV LANG C.UTF-8
