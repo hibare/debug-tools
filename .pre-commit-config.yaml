@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # v6.0.0
     hooks:
       - id: check-added-large-files
       - id: check-json
@@ -14,7 +14,7 @@ repos:
       - id: check-shebang-scripts-are-executable
 
   - repo: https://github.com/hadolint/hadolint
-    rev: v2.14.0
+    rev: 57e1618d78fd469a92c1e584e8c9313024656623 # v2.14.0
     hooks:
       - id: hadolint-docker
         name: Lint Dockerfiles
