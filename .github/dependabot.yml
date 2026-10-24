@@ -10,8 +10,6 @@ updates:
     cooldown:
       default-days: 5
     target-branch: "main"
-    cooldown:
-      default-days: 10
     assignees:
       - "hibare"
     groups:
@@ -29,8 +27,6 @@ updates:
     cooldown:
       default-days: 5
     target-branch: "main"
-    cooldown:
-      default-days: 10
     assignees:
       - "hibare"
     groups:

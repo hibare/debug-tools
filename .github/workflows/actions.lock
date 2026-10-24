@@ -5,9 +5,12 @@ version: 'v0.0.3'
 workflows:
     '.github/workflows/release-drafter.yml':
         - 'release-drafter/release-drafter@v6.0.0'
+        - 'release-drafter/release-drafter@v7.7.0'
+        - 'step-security/harden-runner@v2.21.1'
     '.github/workflows/test-build-publish.yml':
         - 'actions/checkout@v4.2.2'
         - 'hibare/.github@v0.6.0'
+        - 'step-security/harden-runner@v2.21.1'
 dependencies:
     'actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84':
         ref: 'v3.3.2'
@@ -73,3 +76,13 @@ dependencies:
         commit: 'sha1-3f0f87098bd6b5c5b9a36d49c41d998ea58f9348'
         owner_id: 58292376
         repo_id: 139022359
+    'release-drafter/release-drafter@v7.7.0':
+        ref: 'v7.7.0'
+        commit: 'sha1-34d80673e067bdc0c24568d3af899c216adcfaa9'
+        owner_id: 58292376
+        repo_id: 139022359
+    'step-security/harden-runner@v2.21.1':
+        ref: 'v2.21.1'
+        commit: 'sha1-e14015d583714f6e62063499dc959a02595150a1'
+        owner_id: 88700172
+        repo_id: 422287306
