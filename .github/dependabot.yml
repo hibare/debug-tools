@@ -7,6 +7,8 @@ updates:
       interval: "monthly"
       day: "friday"
       time: "00:30"
+    cooldown:
+      default-days: 5
     target-branch: "main"
     cooldown:
       default-days: 10
@@ -24,6 +26,8 @@ updates:
       interval: "monthly"
       day: "friday"
       time: "00:30"
+    cooldown:
+      default-days: 5
     target-branch: "main"
     cooldown:
       default-days: 10
