@@ -34,7 +34,7 @@ jobs:
       packages: write # For GHCR
     steps:
       - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@v2.22.2
+        uses: step-security/harden-runner@v2.22.3
         with:
           egress-policy: audit
 
@@ -75,7 +75,7 @@ jobs:
         shell: bash
 
       - name: image-build-publish
-        uses: hibare/.github/github/shared-workflows/docker-image-build-publish@v0.17.0
+        uses: hibare/.github/github/shared-workflows/docker-image-build-publish@v0.18.0
         with:
           image_names: ${{ steps.set-metadata.outputs.docker_image_names }}
           tags: ${{ steps.set-metadata.outputs.docker_tags }}
