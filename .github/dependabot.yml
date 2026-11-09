@@ -1,15 +1,17 @@
+# Managed by Axon; manual edits will be overwritten.
 version: 2
 updates:
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "00:30"
+      timezone: "UTC"
+    target-branch: "main"
     cooldown:
       default-days: 5
-    target-branch: "main"
     assignees:
       - "hibare"
     groups:
@@ -21,12 +23,13 @@ updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "friday"
       time: "00:30"
+      timezone: "UTC"
+    target-branch: "main"
     cooldown:
       default-days: 5
-    target-branch: "main"
     assignees:
       - "hibare"
     groups:
@@ -41,9 +44,10 @@ updates:
       interval: "weekly"
       day: "friday"
       time: "00:30"
+      timezone: "UTC"
+    target-branch: "main"
     cooldown:
       default-days: 5
-    target-branch: "main"
     assignees:
       - "hibare"
     groups:
