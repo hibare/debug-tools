@@ -1,3 +1,4 @@
+# Managed by Axon; manual edits will be overwritten.
 version: 2
 updates:
   # Maintain dependencies for GitHub Actions
@@ -7,9 +8,10 @@ updates:
       interval: "monthly"
       day: "friday"
       time: "00:30"
+      timezone: "UTC"
+    target-branch: "main"
     cooldown:
       default-days: 5
-    target-branch: "main"
     assignees:
       - "hibare"
     groups:
@@ -24,9 +26,10 @@ updates:
       interval: "monthly"
       day: "friday"
       time: "00:30"
+      timezone: "UTC"
+    target-branch: "main"
     cooldown:
       default-days: 5
-    target-branch: "main"
     assignees:
       - "hibare"
     groups:
@@ -38,12 +41,13 @@ updates:
   - package-ecosystem: "pre-commit"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
       day: "friday"
       time: "00:30"
+      timezone: "UTC"
+    target-branch: "main"
     cooldown:
       default-days: 5
-    target-branch: "main"
     assignees:
       - "hibare"
     groups:
